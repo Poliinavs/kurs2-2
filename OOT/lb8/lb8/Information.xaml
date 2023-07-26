@@ -1,0 +1,33 @@
+﻿<Window x:Class="lb8.Information"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lb8"
+        mc:Ignorable="d"
+         Title="Window1" Height="441" Width="471" Background="#FFEEEBDE">
+    <Grid Margin="0,0,0,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="293*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Text="никнейм" Grid.Row="1" HorizontalAlignment="Left" Margin="16,6,0,116" Width="131" Grid.RowSpan="2"></TextBlock>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Margin="16,11,0,50" Text="информация" Grid.Row="2" HorizontalAlignment="Left" Grid.RowSpan="2" Width="193" Grid.ColumnSpan="2"></TextBlock>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Text="аватар"  Grid.Row="2" HorizontalAlignment="Left" Margin="16,121,0,60" Grid.RowSpan="3" Width="98"></TextBlock>
+
+        <TextBox Style="{StaticResource TextAvorization}" Text="{Binding nickname}" MaxLength="20" Grid.Row="1" Grid.Column="1" Margin="54,15,39,15" />
+        <TextBox  Text="{Binding inform}" Height="NaN" Grid.Row="2" Grid.Column="1" Style="{DynamicResource TextAvorization}" Margin="54,11,39,11" />
+        <TextBox Text="{Binding avatar}"  Grid.Row="3" Grid.Column="1" Style="{StaticResource TextAvorization}" Margin="54,15,39,16" />
+
+        <Button x:Name="Btn" Grid.Column="1" Grid.Row="5" Style="{StaticResource MyButtonStyle}" Click="Btn_Click" Margin="80,11,63,10" >Сохранить</Button>
+    </Grid>
+</Window>

@@ -1,0 +1,153 @@
+﻿<Window x:Class="laba.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba"
+        mc:Ignorable="d"
+        Title="ArtShop" Height="550" Width="900" WindowStyle="ThreeDBorderWindow">
+    <Grid Background="#ebe6e6" x:Name="main_page" Margin="0,0,0,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="143*"/>
+            <!--Начало поля с инфой-->
+
+
+
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="34*" />
+            <ColumnDefinition Width="191*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.RowSpan="4" Margin="0,1,0,0">
+            <!-- Панель меню и ячейки для нее  -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="115*" />
+                <RowDefinition Height="115*" />
+                <RowDefinition Height="115*" />
+                <RowDefinition Height="115*" />
+                <RowDefinition Height="115*" />
+                <RowDefinition Height="115*" />
+            </Grid.RowDefinitions>
+            <Button Margin="10,10,10,10" Content="Button"/>
+            <Button Margin="10,10,10,10" Content="Button" Grid.Row="1"/>
+            <Button Margin="10,10,10,10" Content="Button" Grid.Row="2"/>
+            <Button Margin="10,10,10,10" Content="Button" Grid.Row="3"/>
+            <Button Margin="10,10,10,10" Content="Button" Grid.Row="4"/>
+            <Button Margin="10,10,10,10" Content="Button" Grid.Row="5"/>
+        </Grid>
+        <Image Source="ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="17"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Width="17"/>
+        <Image Source="ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="117"  VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Row="2" Width="117"/>
+
+        <Button Grid.Column="1" Content="В корзину" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="120,0,0,4" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Add_Basket" Height="20" Width="59"  />
+        <Button Grid.Column="1" Content="Удалить" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,524,4" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Del_Basket" Height="20" Width="48"  />
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="166" Margin="122,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="128"/>
+
+        <StackPanel Grid.Column="1" Margin="122,10,531,24" Grid.Row="2">
+            <TextBlock FontSize="15" FontWeight="Bold"  HorizontalAlignment="Center" Margin="1" >
+			Мольберт
+            </TextBlock>
+            <TextBlock  TextTrimming="CharacterEllipsis" >
+			Мольберт-лира
+            </TextBlock>
+            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" >
+            <Run FontSize="12" Foreground="Black" FontWeight="Bold">Разамер: </Run>
+			150x60<LineBreak />
+            <Run FontSize="12" Foreground="Black" FontWeight="Bold">Материал: </Run>
+            сосна<LineBreak />
+            <Run FontSize="12" Foreground="Black" FontWeight="Bold">Производитель: </Run>
+            Azart
+            </TextBlock>
+        </StackPanel>
+        <!-- Верхнее меню  -->
+        <Image Source="465074_cart_purchase_shopping_basket_buy_icon.png" Grid.Column="1" HorizontalAlignment="Left" Margin="697,3,0,4" Width="30"/>
+        <Label Grid.Column="1" x:Name="Amount" FontSize="25" FontWeight="Bold"  Content="0" Margin="0,-4,30,1" HorizontalAlignment="Right" RenderTransformOrigin="0.614,0.32" Grid.RowSpan="2" Width="24"/>
+        <Canvas Grid.Column="1" HorizontalAlignment="Left" Height="161" Margin="0,1,0,0" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Top" Width="240"/>
+        <Canvas Grid.Column="1" HorizontalAlignment="Left" Height="161" Margin="0,1,0,0" Grid.RowSpan="2" Grid.Row="1" VerticalAlignment="Top" Width="240"/>
+        <Image Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="17"  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Width="17" Margin="283,77,0,0"/>
+        <Image Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="117"  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Width="117" Margin="283,27,0,0"/>
+        <Button Grid.Column="1" Content="В корзину" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="403,0,0,1" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Add_Basket" Height="20" Width="59"  />
+        <Button Grid.Column="1" Content="Удалить" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,241,1" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Del_Basket" Height="20" Width="48"  />
+        <Grid Grid.Column="1" HorizontalAlignment="Left" Height="166" Margin="405,2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="128" Grid.RowSpan="2"/>
+        <StackPanel Grid.Column="1" Margin="405,12,248,21" Grid.Row="2">
+            <TextBlock FontSize="15" FontWeight="Bold"  HorizontalAlignment="Center" Margin="1" ><Run Text="Мольберт"/></TextBlock>
+            <TextBlock  TextTrimming="CharacterEllipsis" ><Run Text="Мольберт-лира"/></TextBlock>
+            <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" ><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Разамер:"/><Run Text=" 150x60"/><LineBreak /><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Материал:"/><Run Text=" сосна"/><LineBreak /><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Производитель:"/><Run Text=" Azart"/></TextBlock>
+        </StackPanel>
+        <Canvas Grid.Column="1" HorizontalAlignment="Left" Height="161" Margin="283,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="240"/>
+        <Canvas Grid.Column="1" Background="Azure" Panel.ZIndex="-1" HorizontalAlignment="Left" Height="161" Margin="283,0,0,0" Grid.Row="2" VerticalAlignment="Center" Width="240"/>
+        <Grid Background="#ebe6e6" x:Name="main_page_Copy" Margin="0,0,0,0" Grid.ColumnSpan="2" Grid.RowSpan="5" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="37*" />
+                <RowDefinition />
+                <RowDefinition Height="331*"/>
+                <RowDefinition Height="165*"/>
+                <!--Начало поля с инфой-->
+
+
+
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="34*" />
+                <ColumnDefinition Width="191*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="1" Grid.RowSpan="3" Margin="0,1,0,0">
+                <!-- Панель меню и ячейки для нее  -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="115*" />
+                    <RowDefinition Height="115*" />
+                    <RowDefinition Height="115*" />
+                    <RowDefinition Height="115*" />
+                    <RowDefinition Height="115*" />
+                    <RowDefinition Height="115*" />
+                </Grid.RowDefinitions>
+                <Button Margin="10,10,10,10" Content="Button"/>
+                <Button Margin="10,10,10,10" Content="Button" Grid.Row="1"/>
+                <Button Margin="10,10,10,10" Content="Button" Grid.Row="2"/>
+                <Button Margin="10,10,10,10" Content="Button" Grid.Row="3"/>
+                <Button Margin="10,10,10,10" Content="Button" Grid.Row="4"/>
+                <Button Margin="10,10,10,10" Content="Button" Grid.Row="5"/>
+            </Grid>
+            <Image Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="17"  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Width="17" Margin="0,74,0,0"/>
+            <Image Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="117"  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Width="117" Margin="0,24,0,0"/>
+
+            <Button Grid.Column="1" Content="В корзину" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="120,0,0,170" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Add_Basket" Height="20" Width="59"  />
+            <Button Grid.Column="1" Content="Удалить" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,524,170" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Del_Basket" Height="20" Width="48"  />
+            <Grid Grid.Column="1" HorizontalAlignment="Left" Height="166" Margin="122,1,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Grid.RowSpan="2"/>
+
+            <StackPanel Grid.Column="1" Margin="122,10,531,190" Grid.Row="2">
+                <TextBlock FontSize="15" FontWeight="Bold"  HorizontalAlignment="Center" Margin="1" ><Run Text="Мольберт"/></TextBlock>
+                <TextBlock  TextTrimming="CharacterEllipsis" ><Run Text="Мольберт-лира"/></TextBlock>
+                <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" ><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Разамер:"/><Run Text=" 150x60"/><LineBreak /><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Материал:"/><Run Text=" сосна"/><LineBreak /><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Производитель:"/><Run Text=" Azart"/></TextBlock>
+            </StackPanel>
+            <!-- Верхнее меню  -->
+            <Image Source="/465074_cart_purchase_shopping_basket_buy_icon.png" Grid.Column="1" HorizontalAlignment="Left" Margin="697,3,0,4" Width="30"/>
+            <Label Grid.Column="1" x:Name="Amount1" FontSize="25" FontWeight="Bold"  Content="0" Margin="0,-4,30,1" HorizontalAlignment="Right" RenderTransformOrigin="0.614,0.32" Grid.RowSpan="2" Width="24"/>
+
+            <Canvas Grid.Column="1" Background="Azure" Panel.ZIndex="-1" HorizontalAlignment="Left" Height="161" Margin="283,2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="240">
+
+
+                <Image Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" RenderTransformOrigin="0.419,4.605" Grid.Column="1" Height="118"  VerticalAlignment="Top" HorizontalAlignment="Left" Grid.Row="2" Width="117" Canvas.Top="26"/>
+                <Button Grid.Column="1" Content="В корзину" VerticalAlignment="Bottom" HorizontalAlignment="Left" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Add_Basket" Height="20" Width="59" Canvas.Left="181" Canvas.Top="123"  />
+                <Button Grid.Column="1" Content="Удалить" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Row="2" RenderTransformOrigin="0.514,-0.792" Click="Del_Basket" Height="20" Width="48" Canvas.Left="122" Canvas.Top="123"  />
+                <Grid Grid.Column="1" HorizontalAlignment="Left" Height="166" Margin="405,2,0,0" Grid.Row="2" VerticalAlignment="Top" Width="128" Grid.RowSpan="2"/>
+                <StackPanel Grid.Column="1" Grid.Row="2" Canvas.Left="114" Canvas.Top="26">
+                    <TextBlock FontSize="15" FontWeight="Bold"  HorizontalAlignment="Center" Margin="1" ><Run Text="Мольберт"/></TextBlock>
+                    <TextBlock  TextTrimming="CharacterEllipsis" ><Run Text="Мольберт-лира"/></TextBlock>
+                    <TextBlock Margin="0 5 0 0" TextWrapping="Wrap" ><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Разамер:"/><Run Text=" 150x60"/><LineBreak /><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Материал:"/><Run Text=" сосна"/><LineBreak /><Run FontSize="12" Foreground="Black" FontWeight="Bold" Text="Производитель:"/><Run Text=" Azart"/></TextBlock>
+                </StackPanel>
+            </Canvas>
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>

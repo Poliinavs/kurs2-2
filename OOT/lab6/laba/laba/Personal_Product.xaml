@@ -1,0 +1,93 @@
+﻿<Window x:Class="laba.Personal_Product"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba"
+        mc:Ignorable="d"
+        Title="Products" Height="500" Width="905">
+  
+    <Window.Resources>
+
+
+       
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Cascadia Mono SemiLight" />
+                <Setter Property="Foreground" Value="Black" />
+            <Setter Property="FontSize" Value="30" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=check1, Path=IsChecked}"
+                        Value="True">
+                    <Setter Property="FontSize" Value="20"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid  Background="#ebe6e6" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="119*" />
+            <ColumnDefinition Width="497*" />
+            <ColumnDefinition Width="289*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="65*" />
+            <RowDefinition />
+            <RowDefinition Height="418*" />
+        </Grid.RowDefinitions>
+        <Image   Margin="0 0 0 70" x:Name="Main_Img" Grid.Column="1" Grid.Row="2" Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" AutomationProperties.ItemType="Main_Image" />
+        <StackPanel Grid.Row="2">
+            <Image HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="0,10,0,0" Source="/ecc27b70657309dd0dc8f59ea8ade26a.jpg" Cursor="Hand" MouseDown="New_main"/>
+            <Image HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="0,10,0,0" Source="/1eabcecffb603caaf5c29931ecd2f900.jpg" Cursor="Hand" MouseDown="New_main"/>
+            <Image HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Margin="0,10,0,0" Source="/1.jpg" Cursor="Hand" MouseDown="New_main"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="2" Canvas.Left="114" Canvas.Top="26">
+            <TextBlock x:Name="Product_kind1" FontSize="24"  HorizontalAlignment="Center" Margin="1" FontFamily="Cascadia Mono SemiLight" FontWeight="Bold" ><Run Text="Мольберт"/></TextBlock>
+            <TextBlock x:Name="Product_kind" TextTrimming="CharacterEllipsis" HorizontalAlignment="Center" FontFamily="Cascadia Mono SemiLight" FontSize="14"><Run Text="Мольберт-лира"/></TextBlock>
+            <TextBlock x:Name="Has" HorizontalAlignment="Left" Margin="0 10 0 10" Background="#FF339E33" FontFamily="Cascadia Mono SemiLight" FontSize="14"   Text="В наличии" Width="78" Height="18" Foreground="White"/>
+            <TextBlock Margin="0 5 0 0" FontSize="14" x:Name="Size" Foreground="Black" FontWeight="Bold" Text="Разамер: 150x60"/>
+            <TextBlock Margin="0 0 0 0" FontSize="14" x:Name="Mater" Foreground="Black" FontWeight="Bold" Text="Материал: сосна"/>
+            <TextBlock Margin="0 0 0 0" FontSize="14" x:Name="Proizv" Foreground="Black" FontWeight="Bold" Text="Производитель: Azart"/>
+            <TextBlock Text=" "/>
+            <!--<TextBlock Margin="0 5 0 0" TextWrapping="Wrap" >
+                --><!--<TextBlock FontSize="14" x:Name="Size" Foreground="Black" FontWeight="Bold" Text="Разамер:"/><TextBlock Text=" 150x60"/><LineBreak />--><!--
+                <Run FontSize="14" Foreground="Black" x:Name="Mater" FontWeight="Bold" Text="Материал:"/><Run Text=" сосна"/><LineBreak />
+                <Run FontSize="14" Foreground="Black" FontWeight="Bold" x:Name="Proizv" Text="Производитель:"/><Run Text=" Azart"/>
+            </TextBlock>-->
+            <TextBlock Margin="20"  Background="#FFB4C373" HorizontalAlignment="Center"  FontFamily="Cascadia Mono SemiLight" FontSize="20"   Text=" $20" Width="58" Height="26" Foreground="White"/>
+            <ComboBox x:Name="Color_prod"  Margin="40 40 40 0" HorizontalAlignment="Stretch"  Grid.Column="2" Grid.Row="2" SelectedIndex="3"  >
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock x:Name="Color" FontSize="16">Светлый</TextBlock>
+                        <TextBlock  x:Name="Sosna" >Сосна</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock  x:Name="Temn"  FontSize="16">Темный</TextBlock>
+                        <TextBlock  x:Name="Db" >Дуб</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem>
+                    <StackPanel>
+                        <TextBlock  x:Name="Red"  FontSize="16">Красный</TextBlock>
+                        <TextBlock  x:Name="RedDb" >крашенный дуб</TextBlock>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            <Grid Margin="40"  Height="30">
+                <Image Height="30" HorizontalAlignment="Center" Margin="0 0 80 0" VerticalAlignment="Stretch" Source="/3671809_minus_solid_icon.png" MouseDown="Minus"/>
+                <Label x:Name="Amount1" FontSize="35" FontWeight="Bold" Margin="20 -18 20 0"  Content="0" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                <Image Height="30" HorizontalAlignment="Center"  Margin="80 0 0 0"  Source="/1564491_add_create_new_plus_icon.png" MouseDown="Add"/>
+
+            </Grid>
+
+
+        </StackPanel>
+
+        <Image Source="/465074_cart_purchase_shopping_basket_buy_icon.png" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,30,0"   Width="30" Height="30"/>
+        <Image x:Name="home" Cursor="Hand" Height="32" Grid.Column="0" HorizontalAlignment="Left" Margin="20 0 0 0"  VerticalAlignment="Center" Width="48" Source="/216242_home_icon.png" MouseDown="Home_page"/>
+        <Label Grid.Column="2" x:Name="Amount2" FontSize="25" FontWeight="Bold"  Content="0" HorizontalAlignment="Right" VerticalAlignment="Center" RenderTransformOrigin="0.614,0.32" Width="24"/>
+        <Label Grid.Column="1" x:Name="Ру" FontSize="25" FontWeight="Bold"  Content="Ру" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.614,0.32" Width="40" MouseDown="LocaleButton_Click"/>
+        <Label Grid.Column="1" x:Name="En" FontSize="25" FontWeight="Bold"  Content="En" HorizontalAlignment="Left" VerticalAlignment="Center"   Width="70" Margin="60,0,0,0" MouseDown="LocaleButton_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,49 @@
+﻿<Window x:Class="lb8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lb8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        IsVisibleChanged="Page_IsVisibleChanged">
+    <Window.Resources>
+
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="377*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinitions Width="377*"/>
+            <ColumnDefinitions Height="377*"/>
+        </Grid.ColumnDefinitions>-->
+        <DataGrid x:Name="DGridAuth" AutoGenerateColumns="false" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding name}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Возраст" Binding="{Binding age}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Вес" Binding="{Binding weight}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Рост" Binding="{Binding height}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="id" Binding="{Binding id}" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" x:Name="BtnEdit"  Style="{StaticResource MyButtonStyle}" Click="BtnEdit_Click">
+
+                            </Button>
+
+                        </DataTemplate>
+
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BtnAdd" Style="{StaticResource MyButtonStyle}" Grid.Row="1" HorizontalAlignment="Left"  Content="Добавить" Click="BtnAdd_Click"></Button>
+        <Button x:Name="BtnDel" Style="{StaticResource MyButtonStyle}" Grid.Row="1" HorizontalAlignment="Right" Content="Удалить" Click="BtnDel_Click"></Button>
+        <Button x:Name="BtnSort" Style="{StaticResource MyButtonStyle}" Margin="175,5,0,5" Width="137" Grid.Row="1"  HorizontalAlignment="Left" Content="Сортировать" Click="Sort_Click"></Button>
+        <Button x:Name="Btn1" Style="{StaticResource MyButtonStyle}"  Margin="493,5,0,5" Width="132"  Grid.Row="1" HorizontalAlignment="Left"  Content="список id" Click="Btn1_Click"/>
+        <Button x:Name="BtnSort_Copy" Style="{StaticResource MyButtonStyle}" Margin="0,5,0,5" Width="136" Grid.Row="1"  HorizontalAlignment="Center" Content="Транзакция" Click="tranzact"/>
+    </Grid>
+</Window>

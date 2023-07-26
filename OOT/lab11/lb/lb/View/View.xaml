@@ -1,0 +1,68 @@
+﻿<Window x:Class="lb.View"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lb"
+        mc:Ignorable="d"
+        Title="View" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ListView ItemsSource="{Binding DoctorssList}" IsSynchronizedWithCurrentItem="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Bisque" BorderThickness="1" Margin="10">
+                        <StackPanel Margin="10">
+                            <TextBlock Text="{Binding name}" FontWeight="Bold"/>
+                            <TextBlock Text="{Binding speciality}" />
+                            <TextBlock Text="{Binding category}" />
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Осталось:" />
+                                <TextBlock Text="{Binding amount, Mode=TwoWay}" FontWeight="Bold" Margin="10,0"/>
+                                <TextBlock Text="шт" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="377*"/>
+            <RowDefinition Height="377*"/>
+        </Grid.RowDefinitions>
+        -->
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinitions Width="377*"/>
+            <ColumnDefinitions Height="377*"/>
+        </Grid.ColumnDefinitions>-->
+        <!--
+        <DataGrid x:Name="DGridAuth" AutoGenerateColumns="false" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ФИО" Binding="{Binding name}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Специальность" Binding="{Binding speciality}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Категория" Binding="{Binding category}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество" Binding="{Binding amount}" Width="*"></DataGridTextColumn>
+                <DataGridTemplateColumn Width="auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Редактировать" x:Name="BtnEdit"  >
+
+                            </Button>
+
+                        </DataTemplate>
+
+                    </DataGridTemplateColumn.CellTemplate>
+
+                </DataGridTemplateColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>-->
+
+    </Grid>
+</Window>

@@ -1,0 +1,111 @@
+{
+  "locales": [
+    {
+      "name": "Ру",
+      "values": [
+        {
+          "name": "Product_kind1",
+          "value": "Мольберт"
+        },
+        {
+          "name": "Product_kind",
+          "value": "Мольберт-лира"
+        },
+        {
+          "name": "Has",
+          "value": "В наличии"
+        },
+        {
+          "name": "Proizv",
+          "value": "Производитель: Azart"
+        },
+        {
+          "name": "Mater",
+          "value": "Материал: сосна"
+        },
+        {
+          "name": "Size",
+          "value": "Размер: 150x60"
+        },
+        {
+          "name": "Color",
+          "value": "светлый"
+        },
+        {
+          "name": "RedDb",
+          "value": "крашенный дуб"
+        },
+        {
+          "name": "Red",
+          "value": "Красный"
+        },
+        {
+          "name": "Temn",
+          "value": "Темный"
+        },
+        {
+          "name": "Db",
+          "value": "Дуб"
+        },
+        {
+          "name": "Sosna",
+          "value": "Сосна"
+        }
+      ]
+    },
+    {
+      "name": "En",
+      "values": [
+        {
+          "name": "Product_kind1",
+          "value": "Malbert"
+        },
+        {
+          "name": "Product_kind",
+          "value": "Malbert-lira"
+        },
+        {
+          "name": "Has",
+          "value": "In stock"
+        },
+        {
+          "name": "Proizv",
+          "value": "Manufacturer: Azart"
+        },
+        {
+          "name": "Mater",
+          "value": "Material: pine"
+        },
+        {
+          "name": "Size",
+          "value": "Size: 150x60"
+        },
+        {
+          "name": "Color",
+          "value": "light"
+        },
+        {
+          "name": "RedDb",
+          "value": "painted oak"
+        },
+        {
+          "name": "Red",
+          "value": "Red"
+        },
+        {
+          "name": "Temn",
+          "value": "Dark"
+        },
+        {
+          "name": "Db",
+          "value": "oak"
+        },
+        {
+          "name": "Sosna",
+          "value": "Pine"
+        }
+      ]
+    }
+
+  ]
+}

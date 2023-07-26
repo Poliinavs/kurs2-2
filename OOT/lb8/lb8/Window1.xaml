@@ -1,0 +1,37 @@
+﻿<Window x:Class="lb8.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lb8"
+        mc:Ignorable="d"
+        Title="Window1" Height="441" Width="471" Background="#FFEEEBDE">
+    <Grid Margin="0,0,0,0" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="267*"/>
+            <ColumnDefinition Width="533*"/>
+        </Grid.ColumnDefinitions>
+        <Image Grid.Column="1" Width="40px" Height="40px" Source="img/logo.png" Stretch="Fill"/>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Text="имя" Grid.Row="1"></TextBlock>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Text="вес" Grid.Row="2"></TextBlock>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Text="рост"  Grid.Row="3"></TextBlock>
+        <TextBlock Style="{StaticResource AuthTextBlockStyle}" Text="возраст" Grid.Row="4"></TextBlock>
+      
+        <TextBox Style="{StaticResource TextAvorization}" Text="{Binding name}" MaxLength="20" Grid.Row="1" Grid.Column="1" />
+        <TextBox  Text="{Binding weight}" Grid.Row="2" Grid.Column="1" Style="{StaticResource TextAvorization}" />
+        <TextBox Text="{Binding height}" Grid.Row="3" Grid.Column="1" Style="{StaticResource TextAvorization}" />
+        <TextBox Text="{Binding age}" Grid.Row="4" Grid.Column="1" Style="{StaticResource TextAvorization}" />
+        <!--<TextBox Text="{Binding id}"  Grid.Row="5" Grid.Column="1" Style="{StaticResource TextAvorization}" />-->
+        <Button x:Name="BtnReg" Grid.Column="1" Height="40px" Grid.Row="6" Style="{StaticResource MyButtonStyle}" Click="BtnReg_Click">Регистрация</Button>
+        <Button x:Name="BtnSave" Grid.Column="0" Height="40px" Grid.Row="6" Style="{StaticResource MyButtonStyle}" Click="BtnSave_Click">Пользователи</Button>
+    </Grid>
+</Window>
