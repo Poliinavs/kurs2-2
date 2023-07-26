@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<airports>
+    <airport>
+        <company>Belavia</company>
+        <country>Moskow</country>
+    </airport>
+    <airport>
+        <company>Lufthansa</company>
+        <country>Dubai</country>
+    </airport>
+    <airport>
+        <company>Emirates</company>
+        <country>Peru</country>
+    </airport>
+
+</airports>

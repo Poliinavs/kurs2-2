@@ -1,0 +1,92 @@
+# Папки и файлы, создаваемые средой разработки IntelliJ IDEA
+.idea/
+
+# Папки и файлы, создаваемые средой разработки Eclipse
+.classpath
+.project
+.settings/
+
+# Папки и файлы, создаваемые средой разработки NetBeans
+nbproject/private/
+build/
+
+# Папки и файлы, создаваемые Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Папки и файлы, создаваемые Gradle
+.gradle/
+build/
+
+# Папки и файлы, создаваемые средой разработки VS Code
+.vscode/
+
+# Кэш-файлы
+*.log
+*.cache
+*.diff
+
+# Файлы локализации
+*.class
+*.jar
+*.war
+*.ear
+
+# Файлы компиляции
+*.class
+
+# Файлы профилирования
+*.hprof
+
+# Файлы конфигурации
+*.properties
+*.property
+
+# Файлы библиотек
+lib/
+
+# Файлы с зависимостями
+dependency/
+
+# Папки и файлы с отчётами и статистикой
+report/
+
+# Файлы конфигурации проекта Eclipse
+.settings/
+.classpath
+.project
+
+# Файлы настроек оболочки Maven
+.mvn/
+
+# Файлы локализации Javadoc
+*.css
+
+# Файлы отладки
+*.log
+*.log.*
+*.tmp
+
+# Файлы документации
+/docs/
+/site/
+
+# Файлы кодового покрытия JaCoCo
+.jacoco/
+
+# Файлы профилирования YourKit
+snapshots/
+
+# Файлы для Gradle Wrapper
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+
+# Файлы для Maven Wrapper
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
