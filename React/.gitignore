@@ -1,0 +1,48 @@
+# Папка с зависимостями Node.js
+node_modules/
+
+# Папка с собранными файлами, создаваемыми при запуске `npm run build` или `yarn build`
+build/
+
+# Папка с временными файлами
+temp/
+
+# Логи, файлы отчетов и другие временные или автоматически создаваемые файлы
+*.log
+*.txt
+*.cache
+
+# Файлы, содержащие конфиденциальные данные или пароли
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Файлы с настройками редактора кода
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Кэш и временные файлы NPM и Yarn
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnp/
+.pnp.js
+
+# Файлы локализации
+*.pot
+*.mo
+*.po
+
+# Миниатюры изображений и сгенерированные файлы изображений
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Файлы пакета локального разработчика (обычно используется при разработке пакетов)
+node_modules/

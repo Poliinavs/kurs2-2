@@ -1,0 +1,40 @@
+/* .Menu a {
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 17px;
+line-height: 17px;
+
+display: flex;
+align-items: center;
+
+color: #6B8397;
+    
+  } */
+  /* .first-link{
+    color: #0070FB;
+    margin-right: 91px;
+  } */
+  a:hover {
+    color: #0070FB;/* Цвет ссылки при наведении */
+    cursor: pointer; 
+  }
+  
+  a:active {
+    color: #0070FB;  /* Цвет ссылки при нажатии */
+  }
+
+  .Block a{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 9px;
+    line-height: 11px;
+
+
+    padding: 10px;
+   
+    text-align: center;
+    
+    color: #95A5B2;
+  }

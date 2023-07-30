@@ -1,0 +1,67 @@
+.MainInform {
+   
+    background-color:  #E5E5E5;;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    height: 827px;
+ 
+  }
+  .SmallJobCont{
+      display: flex;
+      flex-direction: column;
+      margin-top:  250px;
+  }
+  
+  .Inf{
+    display: flex;
+      margin-top: -210px;
+     flex-wrap: wrap;
+     justify-content: center;
+     
+      justify-content: space-between;
+  }
+  .List,
+  .Informprod {
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+ /* Пример отступа между блоками */
+   
+  }
+  
+  /* Для выравнивания блоков внутри главного блока */
+
+  
+  .Informprod {
+    height: 100%;
+      width: 660px;
+      /* height: 587px; */
+      justify-content: flex-start;
+     
+      margin-top:  255px;
+  }
+
+  @media screen and (max-width: 1044px) {
+    .MainInform {
+      height: 2000px;
+      
+        }
+        .Inf{
+          justify-content: center;
+  align-items: center;
+        }
+    .Informprod{
+       width: 90%;
+       margin-top: 6px;
+
+    }
+
+
+  }
+
+
+ 

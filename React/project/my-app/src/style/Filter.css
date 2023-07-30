@@ -1,0 +1,326 @@
+.Filter {
+    background-color: white;
+
+    border-radius: 10px;
+    margin-top:  108px; /* Пример отступа между блоками */
+    width: 1160px;
+    height: 60px;
+    display: flex;
+ 
+  }
+  .FirstBlock{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    border: 2px solid #F9F9F9;
+    display: flex;
+  }
+  .Filter p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 15px;
+line-height: 15px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #49627E;
+
+  }
+ 
+  .Filter img{
+    margin-right: 20px;
+  }
+  .Find{
+    width: 89px;
+    display: flex;
+    height: 100%;
+    background: #0070FB;
+    border-radius: 0px 10px 10px 0px;
+    align-items: center;
+    justify-content: center;
+  }
+  .Find p{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+  }
+  /* form{
+    border:1px black solid;
+    padding: 10px;
+  }
+  input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  display: inline-block;
+  width: 36px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin-left: 10px;
+  padding-left:16px ;
+  
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  margin-right: 10px;
+}
+
+
+
+input[type="radio"]:checked + label::before {
+  border: 5px solid #0070FB;
+  opacity: 1;
+  display: block;
+  margin-right: 10px;
+}
+ 
+label{
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+
+
+display: block;
+
+align-items: center;
+
+color: #49627E;
+}
+label{
+  display: inline-block;
+  border: 1px solid #0070FB;
+  width: 100px;
+} */
+
+.RadioGr{
+  background-color: white;
+  width: 100%;
+ 
+  margin-top: 5px;
+}
+.SearchBar{
+  justify-content: center;
+  margin-top:  108px; 
+  pointer-events:all;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+
+  line-height: 20px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+  
+
+  color: #49627E;
+}
+
+ form{
+  display: inline-block;
+
+  background-color: white;
+  border-radius: 10px;
+}
+
+ form ul{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+ form ul li{
+  position: relative;
+  float: left;
+  padding-right: 63px;
+  padding-top: 21px;
+}
+
+ form ul li a{
+  display: flex;
+}
+
+form ul li a img{
+  padding-right: 20px;
+}
+
+ form ul li:first-child a img{
+  padding-right: 20px;
+  padding-left: 25px;
+}
+
+ form ul li a:hover{
+  display: flex;
+  color: blue;
+}
+
+ ul li ul{
+  position: absolute;
+  display: none;
+
+  text-align: left;
+  left: 0;
+}
+
+ul li ul li{
+  padding: 10px 0 0 24px;
+  width: 100%;
+  background: white;
+
+}
+
+ ul li ul li:first-child{
+  padding: 24px 0 0 24px;
+}
+
+ ul li ul li:last-child{
+  padding: 10px 0 19px 24px;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+ ul li:hover > ul{
+  display: initial;
+}
+
+ /* ul li ul li  [type="radio"]:not(:checked), [type="radio"]:checked{
+    position: inherit;
+    margin-right: 10px;
+    opacity: 100;
+    pointer-events: all;
+} */
+
+input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+  height: 20px; 
+  width: 100%;
+  font-size: 16px;
+  margin: 0 0 0px 0;
+  padding: 0;
+}
+
+.NameTitle{
+  display: inline-block;
+  margin-left: 30px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #49627E;
+}
+.Find{
+
+  width: 89px;
+  height: 60px;
+  left: 1071px;
+  top: 0px;
+
+  background: #0070FB;
+  border-radius: 0px 10px 10px 0px;
+
+
+  font-family: 'Montserrat', monospace;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+  justify-content: center;
+}
+.SearchBar2{
+  display: none;
+}
+.SearchBar1{
+  display: none;
+}
+@media screen and (max-width:1244px) {
+
+  .SearchBar{
+    display: none;
+  }
+  .SearchBar1{
+    display:block;
+    margin-top: 97px;
+    margin-bottom: -20px;
+    width: 100%;
+   
+  }
+  ul li ul{
+    margin-top: 20px;
+    margin-left: -60px;
+
+
+  }
+  ul li ul li{
+    padding: 10px 400px 0 -240px;
+    width: 531px;
+    background: white;
+    margin-left:-100px;
+  
+  }
+
+}
+@media screen and (max-width:825px) {
+  .SearchBar1{
+    display: none;
+  }
+  .SearchBar2{
+    display:block;
+    margin-top: 97px;
+    margin-bottom: -20px;
+    width: 100%;
+    z-index: -1;
+
+   
+  }
+  /* input:not([type]), input[type=text]:not(.browser-default), input[type=password]:not(.browser-default), input[type=email]:not(.browser-default), input[type=url]:not(.browser-default), input[type=time]:not(.browser-default), input[type=date]:not(.browser-default), input[type=datetime]:not(.browser-default), input[type=datetime-local]:not(.browser-default), input[type=tel]:not(.browser-default), input[type=number]:not(.browser-default), input[type=search]:not(.browser-default), textarea.materialize-textarea{
+    height: 20px; 
+    width: 10px;
+    font-size: 16px;
+    margin: 0 0 0px 0;
+    padding: 0;
+  } */
+}
